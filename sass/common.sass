@@ -1,0 +1,44 @@
+/*
+ * common.sass
+ *
+ * Copyright 2014 TeenWorks
+ *
+ * @description 
+ * @author fantasy
+ * @create 2014-10-29
+ * @update 2014-10-29
+ */
+
+$BLACK: #333
+$GRAY: #999
+$BASIC_FONT: 10px
+
+html
+  font-size: $BASIC_FONT
+  font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+html, body
+  height: 100%
+
+html, body, div, section, p, h1, h2, h3, ul, li
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  color: $GRAY
+
+ul, li
+  list-style: none
+
+@mixin transform($v)
+  -webkit-transform: $v
+  transform: $v
+  -moz-transform: $v
+  -o-transform: $v
+
+@mixin transition($v)
+  -webkit-transition: $v
+  transition: $v
+  -moz-transition: $v
+  -o-transition: $v

@@ -8,3 +8,81 @@
  * @create 2014-10-29
  * @update 2014-10-29
  */
+
+@import common
+
+.site-header
+  display: table
+  background-color: white
+  text-align: center
+  height: 100%
+  width: 100%
+  .site-header-inner
+    display: table-cell
+    vertical-align: middle
+    h1
+      color: $BLACK
+      font-size: 3rem
+      line-height: 3.5rem
+    .site-header-links
+      margin: 10px 0
+      font-size: 1.6rem
+      li
+        display: inline-block
+        margin: 0 0.5rem
+      a
+        color: $BLACK
+
+.site-nav
+  height: 48px
+  background: rgba(0, 0, 0, 0)
+  position: fixed
+  top: 0
+  left: 0
+  .menu
+    color: $BLACK
+    font-size: 2rem
+    padding: 1.5rem 2rem
+    position: absolute
+    top: 0
+    left: 0
+
+.site-links
+  position: relative
+  width: 250px
+  height: 100%
+  background-color: rgba(60, 60, 60, 1)
+  margin-left: -250px
+  position: fixed
+  top: 0
+  left: 0
+  overflow-y: auto
+  @include transition(margin-left .2s ease)
+  &.show
+    margin-left: 0
+  h2, #close
+    font-size: 2rem
+    color: white
+  h2
+    padding: 1rem 0
+    border-bottom: 1px solid rgba(200, 200, 200, .5)
+  p
+    font-size: 1.5rem
+    color: #f9f9f9
+  a
+    font-size: 1.2rem
+    color: #eee
+  & > ul
+    padding: 0 1rem
+    & > li
+      padding: 1rem .5rem
+      &:first-child
+        text-align: right
+  .footer
+    padding: 2rem .5rem
+    position: absolute
+    bottom: 0
+    color: #eeeeee
+    font-size: 1.2rem
+    text-align: center
+    width: 100%
